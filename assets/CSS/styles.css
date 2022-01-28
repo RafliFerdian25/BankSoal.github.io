@@ -1,0 +1,229 @@
+/*******************************************/
+/*                FONT                     */
+/*******************************************/
+
+@import url(../vendor/fonts/fonts.css);
+
+/****************************************/
+/*               VARIABLE               */
+/****************************************/
+:root {
+    /*height and width*/
+
+    /*color*/
+    --white: rgba(255, 255, 255, 1);
+    --black: rgba(0, 0, 0, 1);
+    --scnd-light: rgba(240, 240, 240);
+    --blue1: rgba(21,114,161,1);
+    --blue2: rgba(154,208,236,1);
+
+    /*font and typography*/
+    --reg-size: 16px;
+    --medium-size: 18px;
+    --big-size: 24px;
+
+    --head-font: "Plus Jakarta Sans", sans-serif;
+    --body-font: "Plus Jakarta Sans", sans-serif;
+
+    /*padding and margin*/
+    --m-min: 4.5rem;
+    --m-max: 6.25rem;
+    --mx-min: 0 4.5rem;
+    --mx-max: 0 6.25rem;
+
+    /*utility-radius*/
+    --sm-rad: 0;
+
+    --global-trans: all 0.3s ease-in-out;
+}
+/*********************************************/
+/*               GENERAL STYLE               */
+/*********************************************/
+* {
+    font-family: var(--body-font);
+    font-weight: 400;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: var(--head-font);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: var(--head-font);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+h4 {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+.fw__r{
+    font-weight: 400 !important;
+}
+.fw__m{
+    font-weight: 500 !important;
+}
+.fw__sb{
+    font-weight: 600 !important;
+}
+.fw__bb{
+    font-weight: 700 !important;
+}
+.blok-full {
+    padding: var(--m-min) var(--m-max);
+}
+
+.blok-x {
+    padding: var(--mx-max);
+}
+.bg__blue{
+    background-color: var(--blue1);
+}
+.bg__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.mx__max{
+    margin: var(--mx-max);
+}
+.mx__min{
+    margin: var(--mx-min);
+}
+/* Font */
+.text__white{
+    color: var(--white) !important;
+}
+.text__blue1{
+    color: var(--white) !important;
+}
+.btn-primary{
+    background-color: var(--blue1);
+}
+.px-100{
+    padding: 0 100px;
+}
+/*********************************************/
+/*               NAVBAR                      */
+/*********************************************/
+.navbar__logo{
+    height: 40px;
+}
+#navbar {
+    position: fixed;
+    /* Make it stick/fixed */
+    top: 0;
+    /* Stay on top */
+    width: 100%;
+    /* Full width */
+    transition: top 0.3s;
+    /* Transition effect when sliding down (and up) */
+}
+
+/*********************************************/
+/*               LOGIN                       */
+/*********************************************/
+.login__logo{
+    height: 64px;
+}
+.login__img,
+.login__img .bg__img{
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--black);
+}
+.login__section{
+    height: 100%;
+}
+.login__kiri{
+    padding: 72px;
+    padding-bottom: 24px;
+}
+.login__judul{
+    margin-bottom: 48px;
+}
+.form-floating .form-control{
+    border-radius: 16px !important;
+}
+.login__section{
+    max-width: 92rem;
+}
+.login__footer{
+    bottom: 0;
+}
+
+/*******************************************/
+/*               RESPONSIVES               */
+/*******************************************/
+
+/*=============== tablet view ===============*/
+@media (max-width: 991px) {
+    /*********************************************/
+    /*               LOGIN                       */
+    /*********************************************/
+    .login__kiri {
+        padding: 36px;
+    }
+    
+}
+@media (max-width: 767px) {
+
+    /*********************************************/
+    /*               LOGIN                       */
+    /*********************************************/
+    .login__kiri {
+        padding: 24px;
+    }
+}
+/*=============== phone view ===============*/
+@media (max-width: 576px) {
+
+    /*********************************************/
+    /*               LOGIN                       */
+    /*********************************************/
+    .login__judul {
+        display: block !important;
+        text-align: center;
+    }
+    .login__footer{
+        padding-top: 64px;
+    }
+    .login__form{
+        text-align: center;
+    }
+}
