@@ -10,3 +10,23 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+// active
+$(document).ready(function () {
+  if (document.title == "Bank Soal | Beranda") {
+    $("#nav__beranda").addClass("active");
+  } else if (document.title == "Bank Soal | Sekolah") {
+    $("#nav__sekolah").addClass("active");
+  } else if (document.title == "Bank Soal | Soal") {
+    $("#nav__soal").addClass("active");
+  }
+});
+//Datatables
+$(document).ready(function () {
+  // Add Row
+  $("#add-row").DataTable({
+    pageLength: 5,
+  });
+  $("#add-row2").DataTable({
+    pageLength: 5,
+  });
+});

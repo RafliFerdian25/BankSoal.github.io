@@ -106,7 +106,9 @@ h6 {
 .blok-full {
     padding: var(--m-min) var(--m-max);
 }
-
+.blok-y{
+    padding: var(--m-min) 0;
+}
 .blok-x {
     padding: var(--mx-max);
 }
@@ -129,13 +131,16 @@ h6 {
     color: var(--white) !important;
 }
 .text__blue1{
-    color: var(--white) !important;
+    color: var(--blue1) !important;
 }
 .btn-primary{
     background-color: var(--blue1);
 }
 .px-100{
     padding: 0 100px;
+}
+.card{
+    box-shadow: 2px 6px 15px 0px rgb(69 65 78 / 10%);
 }
 /*********************************************/
 /*               NAVBAR                      */
@@ -145,6 +150,7 @@ h6 {
 }
 #navbar {
     position: fixed;
+    z-index: 1;
     /* Make it stick/fixed */
     top: 0;
     /* Stay on top */
@@ -153,7 +159,24 @@ h6 {
     transition: top 0.3s;
     /* Transition effect when sliding down (and up) */
 }
-
+.navbar-nav li a:hover,
+.navbar-nav li .active {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    color: var(--blue1) !important;
+}
+.navbar-nav li a{
+    transition: background-color .5s,
+    border-radius .5s,
+    color .3s;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    transition: display .5s;
+}
+.nav-item p{
+    margin-bottom: 0;
+}
 /*********************************************/
 /*               LOGIN                       */
 /*********************************************/
@@ -187,10 +210,44 @@ h6 {
     bottom: 0;
 }
 
+/*********************************************/
+/*               DATATABLE                   */
+/*********************************************/
+.table.dataTable.no-footer{
+    border-bottom: hidden !important;
+}
+.table.dataTable{
+    background-color: transparent !important;
+    border-spacing: none;
+    padding: 3rem 0 !important;
+}
+tbody{
+    border-style: 1px solid var(--white);
+}
+.paginate_button{
+    border: 1px solid var(--blue1) !important;
+    border-radius: 50rem !important;
+}
+.table>tbody{
+    vertical-align: initial !important;
+}
+/*********************************************/
+/*               SEKOLAH                     */
+/*********************************************/
+.table__sekolah .card-header{
+    background-color: white;
+    padding: 16px 20px;
+}
+.btn-p{
+    padding: 16px 20px;
+    border: none;
+}
+.form-button-action{
+    display: inline-flex;
+}
 /*******************************************/
 /*               RESPONSIVES               */
 /*******************************************/
-
 /*=============== tablet view ===============*/
 @media (max-width: 991px) {
     /*********************************************/
@@ -199,7 +256,9 @@ h6 {
     .login__kiri {
         padding: 36px;
     }
-    
+    .blok-beranda{
+        padding: 24px;
+    }
 }
 @media (max-width: 767px) {
 
@@ -208,6 +267,15 @@ h6 {
     /*********************************************/
     .login__kiri {
         padding: 24px;
+    }
+    .navbar .mx__max{
+        margin: 0 1rem;
+    }
+    .blok-beranda h1{
+        font-size: 1.875rem;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: inherit;
     }
 }
 /*=============== phone view ===============*/
@@ -225,5 +293,8 @@ h6 {
     }
     .login__form{
         text-align: center;
+    }
+    .blok-beranda .col-12{
+        margin-bottom: 1rem;
     }
 }
