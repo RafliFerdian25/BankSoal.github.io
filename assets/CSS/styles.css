@@ -16,6 +16,7 @@
     --scnd-light: rgba(240, 240, 240);
     --blue1: rgba(21,114,161,1);
     --blue2: rgba(154,208,236,1);
+    --blue3: rgb(31, 153, 214);
 
     /*font and typography*/
     --reg-size: 16px;
@@ -109,6 +110,12 @@ h6 {
 .blok-y{
     padding: var(--m-min) 0;
 }
+.blok-y-max{
+    padding: var(--m-max) 0;
+}
+.blok-t{
+    padding-top: var(--m-min);
+}
 .blok-x {
     padding: var(--mx-max);
 }
@@ -141,6 +148,15 @@ h6 {
 }
 .card{
     box-shadow: 2px 6px 15px 0px rgb(69 65 78 / 10%);
+}
+.btn-primary:hover{
+    background-color: var(--blue3) !important;
+}
+.vl {
+    height: 100%;
+    margin: 0 2rem 0 3rem;
+
+    border-left: 4px solid rgba(0, 0, 0, 1);
 }
 /*********************************************/
 /*               NAVBAR                      */
@@ -242,8 +258,45 @@ tbody{
     padding: 16px 20px;
     border: none;
 }
+.btn-p1{
+    padding: 8px 20px;
+        border: none;
+
+}
 .form-button-action{
     display: inline-flex;
+}
+/* Detail sekolah */
+.detail__logo{
+    max-height: 240px;
+}
+.back{
+    font-size: 16px;
+    transition: font-size .3s ease-in-out,
+        color .3s;
+
+}
+.back:hover {
+    /* background-color: var(--blue1); */
+    /* color: var(--blue1); */
+    font-size: 20px;
+    transition: font-size .5s ease-in-out, color .3s;
+}
+.detail__sekolah .blok-judul{
+    padding: 32px;
+}
+/*********************************************/
+/*               GURU                        */
+/*********************************************/
+.detail{
+    border: 1px solid var(--blue1);
+    border-radius: 50rem;
+    font-size: 14px;
+}
+.detail:hover{
+    background-color: var(--blue1);
+    color: white;
+    transition: background-color .5s, color .5s;
 }
 /*******************************************/
 /*               RESPONSIVES               */
@@ -258,6 +311,9 @@ tbody{
     }
     .blok-beranda{
         padding: 24px;
+    }
+    .blok-judul{
+        padding: 48px;
     }
 }
 @media (max-width: 767px) {
@@ -296,5 +352,11 @@ tbody{
     }
     .blok-beranda .col-12{
         margin-bottom: 1rem;
+    }
+    /*********************************************/
+    /*               DataTable                   */
+    /*********************************************/
+    .btn-p {
+        padding: 8px 4px;
     }
 }

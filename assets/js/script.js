@@ -18,15 +18,20 @@ $(document).ready(function () {
     $("#nav__sekolah").addClass("active");
   } else if (document.title == "Bank Soal | Soal") {
     $("#nav__soal").addClass("active");
+  } else if (document.title == "Bank Soal | Guru") {
+    $("#nav__guru").addClass("active");
   }
 });
 //Datatables
 $(document).ready(function () {
   // Add Row
-  $("#add-row").DataTable({
+  $("#n").DataTable({
     pageLength: 5,
   });
-  $("#add-row2").DataTable({
+  $("#tabel__guru").DataTable({
+    pageLength: 5,
+  });
+  $("#tabel__sekolah").DataTable({
     pageLength: 5,
   });
 });
