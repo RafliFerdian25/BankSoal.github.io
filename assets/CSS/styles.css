@@ -292,11 +292,23 @@ tbody{
     border: 1px solid var(--blue1);
     border-radius: 50rem;
     font-size: 14px;
+    padding: 0px 16px;
+    margin: 6px 0;
 }
 .detail:hover{
     background-color: var(--blue1);
     color: white;
     transition: background-color .5s, color .5s;
+}
+/*********************************************/
+/*               SOAL                        */
+/*********************************************/
+.soal__collapse.card{
+    background-color: var(--blue2) !important;
+    padding: 16px 16px;
+}
+.soal__collapse p{
+    margin: 0;
 }
 /*******************************************/
 /*               RESPONSIVES               */
