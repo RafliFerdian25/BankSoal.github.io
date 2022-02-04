@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Soal | Soal</title>
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/CSS/styles.css">
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- fontawesome icon -->
+
+</head>
+
+<body>
+    <header>
+        <nav class=" navbar navbar-expand-lg navbar-light bg__blue" id="navbar">
+            <div class="mx__max container-fluid">
+                <a class="navbar-brand d-flex" href="#">
+                    <img src="../assets/images/logo-batang.png" class="navbar__logo" alt="">
+                    <h5 class="mx-4 align-self-center text__white">Bank Soal</h5>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item align-self-center mx-4 ">
+                            <a class="nav-link text__white fw__sb px-2" id="nav__beranda" aria-current="page"
+                                href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item align-self-center mx-4">
+                            <a class="nav-link text__white fw__sb px-2" id="nav__sekolah"
+                                href="sekolah.html">Sekolah</a>
+                        </li>
+                        <li class="nav-item align-self-center mx-4">
+                            <a class="nav-link text__white fw__sb px-2" id="nav__guru" href="guru.html">Guru</a>
+                        </li>
+                        <li class="nav-item align-self-center mx-4">
+                            <a class="nav-link text__white fw__sb px-2" id="nav__soal" href="soal.html">Soal</a>
+                        </li>
+                        <li class="nav-item align-self-center mx-4 dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="navbar__logo rounded-circle" src="../assets/images/user-1.png" alt="">
+                            </a>
+                            <ul class="dropdown-menu p-2" aria-labelledby="navbarDropdown">
+                                <div class="d-flex">
+                                    <img class="navbar__logo rounded-circle" src="../assets/images/user-1.png" alt="">
+                                    <p class="mx-2 align-self-center">Rafli Ferdian</p>
+                                </div>
+                                <li><a class="dropdown-item" href="#">Edit akun</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="/index.html">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="blok-full">
+        <div class="pt-lg-4 pt-5">
+            <a href="sekolah.html" class="text-black">
+                <button class="btn back">
+                    <i class="fas fa-arrow-left"></i>
+                    Daftar Soal
+                </button>
+            </a>
+        </div>
+        <div class="container blok-full blok-judul">
+            <h1 class="text__blue1 text-center">Formulir Soal</h1>
+        </div>
+        <div class="col-md-12 mb-3">
+            <div class="card">
+                <form method="post" class="needs-validation" novalidate>
+                    <div class="card-header p-3">
+                        <div class=" align-items-center justify-content-between">
+                            <p class="m-0 fs-4 fw__r card-title">Tambah Soal</p>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-3 row">
+                            <label for="soal" class="col-md-2 text-md-end col-form-label">Soal <span
+                                    class="required-label">*</span>
+                            </label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="text" name="soal" class="form-control rounded-3" id="soal" required>
+                                <div class="invalid-feedback">
+                                    Tolong isi soal.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end soal -->
+                        <div class="mb-3 row">
+                            <label for="materi" class="col-md-2 text-md-end col-form-label">Materi Soal<span
+                                    class="required-label">*</span> </label>
+                            <div class="col-lg-9 col-md-10">
+                                <select class="form-select" id="materi" required name="materi">
+                                    <option selected disabled value="">Pilih opsi ...</option>
+                                    <option value="A" name="materi">A</option>
+                                    <option value="B" name="materi">B</option>
+                                    <option value="C" name="materi">C</option>
+                                    <option value="D" name="materi">D</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Tolong isi materi benar.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end sekolah induk -->
+                        <div class="mb-3 row">
+                            <label for="soal_img" class="col-md-2 text-md-end form-label">Gambar Soal
+                            </label>
+                            <div class="col-lg-9 col-md-10">
+                                <input class="form-control" type="file" id="soal_img">
+                            </div>
+                        </div>
+                        <!-- end logo siswa -->
+                        <div class="mb-3 row">
+                            <label for="opsi_a" class="col-md-2 text-md-end col-form-label">Opsi A <span
+                                    class="required-label">*</span>
+                            </label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="text" name="opsi_a" class="form-control rounded-3" id="opsi_a" required>
+                                <div class="invalid-feedback">
+                                    Tolong isi opsi A.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end opsi A -->
+                        <div class="mb-3 row">
+                            <label for="opsi_b" class="col-md-2 text-md-end col-form-label">Opsi B <span
+                                    class="required-label">*</span>
+                            </label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="text" name="opsi_b" class="form-control rounded-3" id="opsi_b" required>
+                                <div class="invalid-feedback">
+                                    Tolong isi opsi B.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end opsi A -->
+                        <div class="mb-3 row">
+                            <label for="opsi_c" class="col-md-2 text-md-end col-form-label">Opsi C <span
+                                    class="required-label">*</span>
+                            </label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="text" name="opsi_c" class="form-control rounded-3" id="opsi_c" required>
+                                <div class="invalid-feedback">
+                                    Tolong isi opsi C.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end opsi A -->
+                        <div class="mb-3 row">
+                            <label for="opsi_D" class="col-md-2 text-md-end col-form-label">Opsi D <span
+                                    class="required-label">*</span>
+                            </label>
+                            <div class="col-lg-9 col-md-10">
+                                <input type="text" name="opsi_D" class="form-control rounded-3" id="opsi_D" required>
+                                <div class="invalid-feedback">
+                                    Tolong isi opsi D.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end opsi A -->
+                        <div class="mb-3 row">
+                            <label for="jawaban" class="col-md-2 text-md-end col-form-label">Jawaban Benar <span
+                                    class="required-label">*</span> </label>
+                            <div class="col-lg-9 col-md-10">
+                                <select class="form-select" id="jawaban" required>
+                                    <option selected disabled value="">Pilih opsi ...</option>
+                                    <option value="A" name="jawaban">A</option>
+                                    <option value="B" name="jawaban">B</option>
+                                    <option value="C" name="jawaban">C</option>
+                                    <option value="D" name="jawaban">D</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Tolong isi jawaban benar.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end sekolah induk -->
+                    </div>
+                    <div class="card-action p-4">
+                        <div class="row">
+                            <div class="col-12 justify-content-end d-flex">
+                                <a href="sekolah.html" class="btn btn-danger me-4 rounded-pill btn-submit fs-7">
+                                    Batal
+                                </a>
+                                <button type="submit"
+                                    class="btn btn-primary rounded-pill btn-submit fs-7">Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="fw__sb text-center p-5 pb-2">©2022. Dinas Pendidikan dan Kebudayaan Kabupaten Batang.</p>
+    </footer>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Datatables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js">
+    </script>
+    <!-- Script -->
+    <script src="../assets/js/script.js"></script>
+
+</body>
+
+</html>

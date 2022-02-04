@@ -17,6 +17,7 @@
     --blue1: rgba(21,114,161,1);
     --blue2: rgba(154,208,236,1);
     --blue3: rgb(31, 153, 214);
+    --abu: rgba(0, 0, 0, 0.5);
 
     /*font and typography*/
     --reg-size: 16px;
@@ -158,6 +159,7 @@ h6 {
 
     border-left: 4px solid rgba(0, 0, 0, 1);
 }
+
 /*********************************************/
 /*               NAVBAR                      */
 /*********************************************/
@@ -277,10 +279,8 @@ tbody{
 
 }
 .back:hover {
-    /* background-color: var(--blue1); */
-    /* color: var(--blue1); */
-    font-size: 20px;
-    transition: font-size .5s ease-in-out, color .3s;
+    font-size: 18px;
+    transition: font-size .5s ease-in-out;
 }
 .detail__sekolah .blok-judul{
     padding: 32px;
@@ -371,4 +371,36 @@ tbody{
     .btn-p {
         padding: 8px 4px;
     }
+}
+
+/*********************************************/
+/*               New                         */
+/*********************************************/
+.required-label{
+    color: red;
+}
+.card-action{
+    border-top: 3px solid rgba(0, 0, 0, 0.104);
+}
+.fs-7{
+    font-size: 14px !important;
+}
+.btn-submit{
+    padding: 14px 24px;
+}
+.soal__img{
+    max-height: 250px;
+}
+.tambah__materi{
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.2);
+}
+.tambah__materi:hover{
+    background-color: var(--blue1);
+    color: white;
+    transition: background-color .5s,
+    color .3s;
+}
+.text__abu{
+    color: rgba(0, 0, 0, 0.4);
 }

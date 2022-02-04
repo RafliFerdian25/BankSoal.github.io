@@ -46,7 +46,7 @@
                                 href="sekolah.html">Sekolah</a>
                         </li>
                         <li class="nav-item align-self-center mx-4">
-                            <a class="nav-link text__white fw__sb px-2" id="nav__soal" href="soal.html">soal</a>
+                            <a class="nav-link text__white fw__sb px-2" id="nav__guru" href="guru.html">Guru</a>
                         </li>
                         <li class="nav-item align-self-center mx-4">
                             <a class="nav-link text__white fw__sb px-2" id="nav__soal" href="#">Soal</a>
@@ -75,7 +75,7 @@
     </header>
     <div class="blok-full blok-beranda">
         <div class="container blok-full blok-judul">
-            <h1 class="text__blue1 text-center">Data soal</h1>
+            <h1 class="text__blue1 text-center">Data Bank Soal</h1>
         </div>
         <!-- Tabel -->
         <div class="row">
@@ -121,7 +121,7 @@
                                         <th>No</th>
                                         <th>Mata Pelajaran</th>
                                         <th>Jumlah soal</th>
-                                        <th>Jumlah Siswa</th>
+                                        <th>Jumlah Guru</th>
                                         <th style="width: 10%">Aksi</th>
                                     </tr>
                                 </thead>
@@ -133,10 +133,17 @@
                                         <td>232</td>
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="" class="d-flex">
+                                                <a href="daftar_soal.html" class="d-flex">
                                                     <button type="button" data-toggle="tooltip" title=""
                                                         class="btn detail btn-lg" data-original-title="Lebih detail">
-                                                        Detail
+                                                        Selengkapnya
+                                                    </button>
+                                                </a>
+                                                <a href="form_mapel.html" class="d-flex">
+                                                    <button type="button" data-toggle="tooltip" title=""
+                                                        class="btn btn-link  btn-lg"
+                                                        data-original-title="Lihat dan Edit">
+                                                        <i class="fa fa-edit text__blue1"></i>
                                                     </button>
                                                 </a>
                                                 <a href="" class="d-flex">
@@ -155,10 +162,17 @@
                                         <td>232</td>
                                         <td>
                                             <div class="form-button-action">
-                                                <a href="" class="d-flex">
+                                                <a href="daftar_soal.html" class="d-flex">
                                                     <button type="button" data-toggle="tooltip" title=""
                                                         class="btn detail btn-lg" data-original-title="Lihat dan Edit">
-                                                        Detail
+                                                        Selengkapnya
+                                                    </button>
+                                                </a>
+                                                <a href="form_mapel.html" class="d-flex">
+                                                    <button type="button" data-toggle="tooltip" title=""
+                                                        class="btn btn-link  btn-lg"
+                                                        data-original-title="Lihat dan Edit">
+                                                        <i class="fa fa-edit text__blue1"></i>
                                                     </button>
                                                 </a>
                                                 <a href="" class="d-flex">
@@ -176,244 +190,6 @@
                     </div>
                 </div>
             </div> <!-- end tabel mata pelajaran -->
-            <!-- UTS -->
-            <div class="col-md-12 soal__content mb-3">
-                <a class="card soal__collapse" data-bs-toggle="collapse" href="#collapseExample-uts" role="button"
-                    aria-expanded="false" aria-controls="collapseExample">
-                    <div class="row justify-content-between">
-                        <!-- Kiri -->
-                        <div class="col-3">
-                            <p>Ujian Tengah Semester</p>
-                        </div>
-                        <div class="col-1">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                </a>
-                <div class="collapse" id="collapseExample-uts">
-                    <div class="card card-body">
-                        <!-- Table soal -->
-                        <div class="col-md-12 table__sekolah mb-3">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="fs-5 fw__r card-title">Soal UTS</p>
-                                        <a class="d-block" href="/tambah/tambah">
-                                            <button
-                                                class="btn btn-primary rounded-pill d-flex align-items-center btn-p">
-                                                <i class="fas fa-plus text-white me-2 d-block mr-2"></i>
-                                                <span class="d-block text-white">Tambah soal</span>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="card-body">
-                                    <!-- alert kelola soal -->
-                                    <!-- <?php if (session()->getFlashdata('add-msg-soal')) : ?>
-                                <div class="alert alert-success" role="alert">
-                                    <?= session()->getFlashdata('add-msg-soal'); ?>
-                                </div>
-                                <?php endif; ?>
-                                <?php if (session()->getFlashdata('edit-msg-soal')) : ?>
-                                <div class="alert alert-success" role="alert">
-                                    <?= session()->getFlashdata('edit-msg-soal'); ?>
-                                </div>
-                                <?php endif; ?>
-                                <?php if (session()->getFlashdata('delete-msg-soal')) : ?>
-                                <div class="alert alert-danger" role="alert">
-                                    <?= session()->getFlashdata('delete-msg-soal'); ?>
-                                </div>
-                                <?php endif; ?> -->
-                                    <!-- end alert kelola soal -->
-
-                                    <div class="table-responsive">
-                                        <table id="tabel__soal"
-                                            class="display table table-hover table-striped table-borderless">
-                                            <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Nama soal</th>
-                                                    <th>Asal Sekolah</th>
-                                                    <th>Mata Pelajaran</th>
-                                                    <th style="width: 10%">Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>SMP</td>
-                                                    <td>Batang</td>
-                                                    <td>232</td>
-                                                    <td>
-                                                        <div class="form-button-action">
-                                                            <a href="" class="d-flex">
-                                                                <button type="button" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link btn-lg"
-                                                                    data-original-title="Lihat dan Edit">
-                                                                    <i class="text__blue1 fa fa-edit"></i>
-                                                                </button>
-                                                            </a>
-                                                            <a href="" class="d-flex">
-                                                                <button type="button" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link" data-original-title="Hapus">
-                                                                    <i class="far fa-trash-alt text-danger"></i>
-                                                                </button>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>SMP</td>
-                                                    <td>Batang</td>
-                                                    <td>232</td>
-                                                    <td>
-                                                        <div class="form-button-action">
-                                                            <a href="" class="d-flex">
-                                                                <button type="button" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link  btn-lg"
-                                                                    data-original-title="Lihat dan Edit">
-                                                                    <i class="fa fa-edit text__blue1"></i>
-                                                                </button>
-                                                            </a>
-                                                            <a href="" class="d-flex">
-                                                                <button type="button" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link" data-original-title="Hapus">
-                                                                    <i class="far fa-trash-alt text-danger"></i>
-                                                                </button>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- end tabel soal -->
-                    </div>
-                </div>
-            </div>
-            <!-- UAS -->
-            <div class="col-md-12 soal__content mb-3">
-                <a class="card soal__collapse" data-bs-toggle="collapse" href="#collapseExample-uas" role="button"
-                    aria-expanded="false" aria-controls="collapseExample">
-                    <div class="row justify-content-between">
-                        <!-- Kiri -->
-                        <div class="col-3">
-                            <p>Ujian Akhir Semester</p>
-                        </div>
-                        <div class="col-1">
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                    </div>
-                </a>
-                <div class="collapse" id="collapseExample-uas">
-                    <div class="card card-body">
-                        <!-- Table soal -->
-                        <div class="col-md-12 table__sekolah mb-3">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="fs-5 fw__r card-title">Soal UAS</p>
-                                        <a class="d-block" href="/tambah/tambah">
-                                            <button
-                                                class="btn btn-primary rounded-pill d-flex align-items-center btn-p">
-                                                <i class="fas fa-plus text-white me-2 d-block mr-2"></i>
-                                                <span class="d-block text-white">Tambah soal</span>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="card-body">
-                                    <!-- alert kelola soal -->
-                                    <!-- <?php if (session()->getFlashdata('add-msg-soal')) : ?>
-                                <div class="alert alert-success" role="alert">
-                                    <?= session()->getFlashdata('add-msg-soal'); ?>
-                                </div>
-                                <?php endif; ?>
-                                <?php if (session()->getFlashdata('edit-msg-soal')) : ?>
-                                <div class="alert alert-success" role="alert">
-                                    <?= session()->getFlashdata('edit-msg-soal'); ?>
-                                </div>
-                                <?php endif; ?>
-                                <?php if (session()->getFlashdata('delete-msg-soal')) : ?>
-                                <div class="alert alert-danger" role="alert">
-                                    <?= session()->getFlashdata('delete-msg-soal'); ?>
-                                </div>
-                                <?php endif; ?> -->
-                                    <!-- end alert kelola soal -->
-
-                                    <div class="table-responsive">
-                                        <table id="tabel__soal"
-                                            class="display table table-hover table-striped table-borderless">
-                                            <thead>
-                                                <tr>
-                                                    <th>No</th>
-                                                    <th>Nama soal</th>
-                                                    <th>Asal Sekolah</th>
-                                                    <th>Mata Pelajaran</th>
-                                                    <th style="width: 10%">Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>SMP</td>
-                                                    <td>Batang</td>
-                                                    <td>232</td>
-                                                    <td>
-                                                        <div class="form-button-action">
-                                                            <a href="" class="d-flex">
-                                                                <button type="button" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link btn-lg"
-                                                                    data-original-title="Lihat dan Edit">
-                                                                    <i class="text__blue1 fa fa-edit"></i>
-                                                                </button>
-                                                            </a>
-                                                            <a href="" class="d-flex">
-                                                                <button type="button" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link" data-original-title="Hapus">
-                                                                    <i class="far fa-trash-alt text-danger"></i>
-                                                                </button>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>SMP</td>
-                                                    <td>Batang</td>
-                                                    <td>232</td>
-                                                    <td>
-                                                        <div class="form-button-action">
-                                                            <a href="" class="d-flex">
-                                                                <button type="button" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link  btn-lg"
-                                                                    data-original-title="Lihat dan Edit">
-                                                                    <i class="fa fa-edit text__blue1"></i>
-                                                                </button>
-                                                            </a>
-                                                            <a href="" class="d-flex">
-                                                                <button type="button" data-toggle="tooltip" title=""
-                                                                    class="btn btn-link" data-original-title="Hapus">
-                                                                    <i class="far fa-trash-alt text-danger"></i>
-                                                                </button>
-                                                            </a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- end tabel soal -->
-                    </div>
-                </div>
-            </div>
         </div> <!-- end table -->
     </div>
     <footer>
